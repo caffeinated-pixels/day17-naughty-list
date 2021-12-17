@@ -40,6 +40,8 @@ function createListItem(name) {
   moveBtn.className = 'move-btn'
   moveBtn.textContent = 'move'
 
+  moveBtn.addEventListener('click', movePerson)
+
   listItem.appendChild(moveBtn)
 
   return listItem
@@ -65,9 +67,6 @@ function sort() {
 function addPerson(e) {
   e.preventDefault()
 
-  console.log('add person!')
-  console.log(textInput.value, selectList.value)
-
   if (textInput.value.trim() === '') return
 
   const listItem = createListItem(textInput.value.trim())
@@ -79,6 +78,20 @@ function addPerson(e) {
   }
 
   textInput.value = ''
+}
+
+function movePerson(e) {
+  console.log('move person')
+  console.log(e.target.parentNode.parentNode.id)
+
+  const currentList = e.target.parentNode.parentNode.id
+  const listItem = e.target.parentNode
+
+  if (currentList === 'nice-list') {
+    naughtyList.appendChild(listItem)
+  } else {
+    niceList.appendChild(listItem)
+  }
 }
 
 // Task:
