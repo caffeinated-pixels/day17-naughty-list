@@ -76,11 +76,14 @@ button:hover {
 
 .input-container {
   margin-bottom: 1em;
-  display: flex;
-  gap: 1em;
   display: none;
+  gap: 1em;
 }
 
 .text-input {
   padding: 0.5em;
+}
+
+.add-person-btn {
+  display: none;
 }

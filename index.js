@@ -3,6 +3,9 @@ const naughtyList = document.getElementById('naughty-list')
 const sortBtn = document.getElementById('sort-btn')
 sortBtn.addEventListener('click', sort)
 
+const inputContainer = document.getElementById('input-container')
+const addPersonBtn = document.getElementById('add-person-btn')
+
 const sorteesArr = [
   {
     name: 'David',
@@ -33,6 +36,10 @@ function sort() {
       naughtyList.appendChild(listItem)
     }
   }
+
+  inputContainer.style.display = 'flex'
+  sortBtn.remove()
+  addPersonBtn.style.display = 'inline-block'
 }
 
 // Task:
