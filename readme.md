@@ -1,4 +1,4 @@
-# JavaScriptmas Day 16 - Naughty List, Nice List
+# JavaScriptmas Day 17 - Naughty List, Nice List
 
 My effort for [Scrimba's JavaScriptmas 2021](https://scrimba.com/learn/javascriptmas2021) Day 17 challenge.
 
