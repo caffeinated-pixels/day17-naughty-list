@@ -70,14 +70,27 @@ h1 {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 .move-btn {
-  padding: 0.25em 0.5em;
+  color: white;
+  background: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: transform 0.25s;
+}
+
+.move-btn:hover {
+  transform: scale(1.4);
 }
 
 .sort-btn,
 .add-person-btn {
   padding: 1em 2em;
-  border: none;
+
   font-size: 1.2rem;
   background-color: var(--gold);
   color: var(--dark-green);
@@ -89,7 +102,6 @@ h1 {
 
 .sort-btn:hover,
 .add-person-btn:hover {
-  cursor: pointer;
   transform: scale(1.03);
 }
 
