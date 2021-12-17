@@ -1,7 +1,7 @@
 const niceList = document.getElementById('nice-list')
 const naughtyList = document.getElementById('naughty-list')
-const btn = document.getElementById('btn')
-btn.addEventListener('click', sort)
+const sortBtn = document.getElementById('sort-btn')
+sortBtn.addEventListener('click', sort)
 
 const sorteesArr = [
   {
