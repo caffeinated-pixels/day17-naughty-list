@@ -4,6 +4,9 @@ const sortBtn = document.getElementById('sort-btn')
 sortBtn.addEventListener('click', sort)
 
 const inputContainer = document.getElementById('input-container')
+const textInput = document.getElementById('text-input')
+const selectList = document.getElementById('select-list')
+
 const addPersonBtn = document.getElementById('add-person-btn')
 
 const sorteesArr = [
@@ -40,6 +43,25 @@ function sort() {
   inputContainer.style.display = 'flex'
   sortBtn.remove()
   addPersonBtn.style.display = 'inline-block'
+  addPersonBtn.addEventListener('click', addPerson)
+}
+
+function addPerson(e) {
+  e.preventDefault()
+
+  console.log('add person!')
+  console.log(textInput.value, selectList.value)
+
+  if (textInput.value.trim() === '') return
+
+  const listItem = document.createElement('li')
+  listItem.textContent = textInput.value.trim()
+
+  if (selectList.value === 'nice') {
+    niceList.appendChild(listItem)
+  } else {
+    naughtyList.appendChild(listItem)
+  }
 }
 
 // Task:
