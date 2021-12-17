@@ -62,6 +62,8 @@ function addPerson(e) {
   } else {
     naughtyList.appendChild(listItem)
   }
+
+  textInput.value = ''
 }
 
 // Task:
