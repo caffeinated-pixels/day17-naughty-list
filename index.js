@@ -39,6 +39,7 @@ function createListItem(name) {
 
   moveBtn.className = 'move-btn'
   moveBtn.textContent = '⇄'
+  moveBtn.ariaLabel = 'move person'
 
   moveBtn.addEventListener('click', movePerson)
 
