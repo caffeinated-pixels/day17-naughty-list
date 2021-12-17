@@ -32,7 +32,7 @@ h1 {
 .list {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .list {
@@ -60,10 +60,18 @@ h1 {
 
 .list-item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 0.5em;
+  /* border: 1px yellow solid; */
+}
+
+.list-item > p {
+  margin: 0;
 }
 
 .move-btn {
+  padding: 0.25em 0.5em;
 }
 
 .sort-btn,

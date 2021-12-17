@@ -28,10 +28,26 @@ const sorteesArr = [
   },
 ]
 
+function createListItem(name) {
+  const listItem = document.createElement('li')
+  const personName = document.createElement('p')
+  const moveBtn = document.createElement('button')
+  listItem.className = 'list-item'
+
+  personName.textContent = name
+  listItem.appendChild(personName)
+
+  moveBtn.className = 'move-btn'
+  moveBtn.textContent = 'move'
+
+  listItem.appendChild(moveBtn)
+
+  return listItem
+}
+
 function sort() {
   for (const person of sorteesArr) {
-    const listItem = document.createElement('li')
-    listItem.textContent = person.name
+    const listItem = createListItem(person.name)
 
     if (person.hasBeenGood) {
       niceList.appendChild(listItem)
@@ -54,8 +70,7 @@ function addPerson(e) {
 
   if (textInput.value.trim() === '') return
 
-  const listItem = document.createElement('li')
-  listItem.textContent = textInput.value.trim()
+  const listItem = createListItem(textInput.value.trim())
 
   if (selectList.value === 'nice') {
     niceList.appendChild(listItem)
